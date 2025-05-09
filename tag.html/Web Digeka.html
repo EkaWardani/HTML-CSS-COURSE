@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digeka - Digital Marketing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffe0eb;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      background: #fff;
+    }
+
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      color: #ff3b7d;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-image {
+      width: 70%;
+      max-width: 600px;
+    }
+
+    .putri-image {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+
+    .layanan {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .layanan h2 {
+      margin-bottom: 1rem;
+    }
+
+    .layanan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .layanan-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .layanan-card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .layanan-card button {
+      margin-top: 1rem;
+      background: #ff3b7d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .portofolio, .blog, .testimoni, .kontak {
+      padding: 2rem;
+      background: #ffc2d1;
+      margin-top: 2rem;
+    }
+
+    .portofolio h2, .blog h2, .testimoni h2, .kontak h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-item, .blog-post {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: #ff3b7d;
+      color: white;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .testimoni p {
+      text-align: center;
+      font-style: italic;
+    }
+
+    .kontak form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .kontak input, .kontak textarea {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .kontak button {
+      background: #ff3b7d;
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .sosial {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      background: #ffbad2;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+  <script>
+    // Toggle menu
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="C:\Users\Lenovo\Downloads\Logo Digeka.png" width="200" height="100" alt="Logo">
+      <div class="tagline">Solusi Digital Untuk Bisnis Anda</div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>  
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#blog">Blog</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section class="hero">
+    <img src="C:\Users\Lenovo\Downloads\thumbnail digimar.jpg" alt="Digital Marketing" class="hero-image">
+    <div class="hero-text">
+      <img src="C:\Users\Lenovo\Downloads\Profil_Web.png" alt="Putri Eka" class="putri-image">
+      <p>Hai..Saya Putri Eka Wardani. Seorang Digital Marketer pemula yang haus akan ilmu dan akan terus belajar dalam menciptakan konten pemasaran digital yang menarik untuk meningkatkan visibilitas online dan mencapai target pemasaran Anda. Saya sedang mencari peluang untuk meningkatkan skill dan minat saya di era digital sekarang ini.</p>
+    </div>
+  </section>
+
+  <section class="layanan" id="layanan">
+    <h2>LAYANAN KAMI</h2>
+    <div class="layanan-grid">
+      <div class="layanan-card">
+        <h3>Social Media Management</h3>
+        <p>Miliki social media yang relevan dengan market Anda.</p>
+        <a href="tel:+6285398445434" class="button-pink" style="background-color: #ff3b7d; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Hubungi Kami</a>
+      </div>
+      <div class="layanan-card">
+        <h3>Content Creation</h3>
+        <p>Produksi segala kebutuhan pembuatan video untuk brand Anda.</p>
+        <a href="tel:+6285398445434" class="button-pink" style="background-color: #ff3b7d; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Hubungi Kami</a>
+      </div>
+      <div class="layanan-card">
+        <h3>Email Marketing</h3>
+        <p>Buat Kampanye Iklan seperti Buletin atau Promosi.</p>
+        <a href="tel:+6285398445434" style="background-color: #ff3b7d; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Hubungi Kami</a>
+      </div>
+      <div class="layanan-card">
+        <h3>SEO</h3>
+        <p>Membantu bisnis Anda meningkatkan visibilitas online pada kolom pencarian.</p>
+        <a href="tel:+6285398445434" style="background-color: #ff3b7d; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Hubungi Kami</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="portofolio" id="portofolio">
+    <h2>PORTOFOLIO</h2>
+    <div class="portfolio-item">
+      <h3>Social Media Management</h3>
+      <img src="C:\Users\Lenovo\Downloads\Beranda_Fanzy.png" alt="Fanzy Media" width="350" height="350">
+      <p>Merancang dan mengelola akun media sosial “Fanzy”, termasuk penjadwalan posting, peningkatan visibilitas merek dan interaksi dengan audiens.</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Content Creation</h3>
+      <img src="C:\Users\Lenovo\Downloads\fanzy_1.png" alt="Fanzy Content" width="350" height="350">
+      <p>Membuat konten yang berfokus pada visual menarik termasuk untuk foto, produk, dan video pendek serta penyesuaian konten berdasarkan trend yang berkembang.</p>
+    </div>
+  </section>
+
+  <section class="blog" id="blog">
+    <h2>BLOG</h2>
+    <div class="blog-post">
+      <h3>Best Email Marketing Campaigns of 2025</h3>
+      <p>Pemasaran email bisa terasa seperti pertempuran yang berat tetapi, 
+        ketika dilakukan dengan benar, itu adalah pengubah permainan.</p>
+      <img src="C:\Users\Lenovo\OneDrive\Documents\blog 1.jpg" alt="Email Campaign" width="200" height="200">
+      <a href="https://neilpatel.com/blog/email-marketing-companies-2/" target="_blank" class="btn">Selengkapnya</a>
+    </div>
+    <div class="blog-post">
+      <h3>Best SEO Plugins for WordPress</h3>
+      <p>Anda dapat menggunakan pilihan plugin WordPress SEO untuk blog Anda,
+         meningkatkan kualitas dan kuantitas lalu lintas situs web.</p>
+      <img src="C:\Users\Lenovo\OneDrive\Documents\blog 2.jpg" alt="SEO Plugin" width="200" height="200">
+      <a href="https://neilpatel.com/blog/best-seo-plugins-for-wordpress/" target="_blank" class="btn">Selengkapnya</a>
+    </div>
+  </section>
+
+  <section style="background-color: #ffe6ef; padding: 50px; font-family: sans-serif;">
+    <h2 style="font-size: 28px; color: #000; margin-bottom: 20px;">Apa yang Pelanggan Katakan ?</h2>
+    
+    <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+      
+      <div style="width: 200px; height: 280px; background-color: #ddd; border-top-left-radius: 80px; border-top-right-radius: 80px; overflow: hidden;">
+        <img src="C:\Users\Lenovo\Downloads\florist-lokal-1.jpg" alt="User" 
+             style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+      </div>
+
+      <div style="background-color: white; padding: 20px; max-width: 500px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="margin: 0 0 15px; font-size: 14px; color: #222;">
+          “Saya sangat sibuk mengurus toko, jadi tidak punya waktu untuk media sosial. Digeka sangat membantu! 
+          Mereka mengelola semua postingan, interaksi dengan pelanggan, dan bahkan membuat promosi khusus. 
+          Hasilnya, toko kami semakin dikenal dan penjualan pun meningkat.”
+        </p>
+        <p style="font-weight: bold; font-size: 14px;">Chelsea, Owner Lova Florist</p>
+      </div>
+      
+    </div>
+</section>
+
+</body>
+</html>
+
+  <section class="kontak" id="kontak">
+    <h2>Tertarik Untuk Konsultasi Dengan Digeka?</h2>
+    <h3>Kami di sini untuk memberikan Anda layanan terbaik. Jangan ragu untuk menghubungi kami jika ada pertanyaan ataupun saran. Silakan isi formulir di bawah ini.</h3>
+    <div class="google-form-embed">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSczDJyIYPbO3j5olPqAIeqn-qryEyPbKbibvHRsZHYruMHR2w/viewform?embedded=true"
+        width="100%"
+        height="686"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border:none;"
+      >Memuat…</iframe>
+    </div>
+    <div class="sosial"></div>
+  </section>
+
+<style>
+  .kontak {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+
+  .kontak h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .kontak h3 {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .google-form-embed {
+    width: 100%;
+    overflow: hidden; /* Mencegah scroll horizontal jika iframe lebih lebar */
+  }
+
+  .google-form-embed iframe {
+    display: block; /* Menghilangkan ruang kosong di bawah iframe */
+    margin: 0 auto; /* Membuat iframe berada di tengah secara horizontal (jika perlu) */
+    max-width: 100%; /* Membuat iframe responsif terhadap lebar kontainer */
+  }
+
+  /* Anda bisa menambahkan style lain untuk bagian sosial jika diperlukan */
+  .sosial {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Footer Digeka</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .footer {
+      background-color: #fcdde6;
+      text-align: center;
+    }
+
+    .footer-icons {
+      padding: 1rem 0;
+      background-color: #fcdde6;
+    }
+
+    .footer-icons img {
+      margin: 0 10px;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: #e6517e;
+      color: #000;
+      padding: 2rem 1rem;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 150px;
+      margin: 1rem;
+      text-align: left;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .footer-column p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .footer-bottom {
+      background-color: #e6517e;
+      padding: 1rem;
+      color: black;
+      font-weight: bold;
+      border-radius: 0 0 15px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="footer">
+    <div class="footer-icons">
+      <a href="https://instagram.com/digeka.id" target="_blank">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="mailto:digeka@gmail.com">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/new-post.png" alt="Email">
+      </a>
+      <a href="tel:1234567890">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/phone.png" alt="Telepon">
+      </a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-column">
+        <h4>SHOP:</h4>
+        <p>About</p>
+        <p>FAQ</p>
+        <p>Shipping / Pick Up</p>
+        <p>Store Policy</p>
+      </div>
+      <div class="footer-column">
+        <h4>OPENING HOURS:</h4>
+        <p>Senin-Jumat: 7am - 10pm</p>
+        <p>Sabtu: 8am - 10pm</p>
+        <p>Minggu: 8am - 11pm</p>
+      </div>
+      <div class="footer-column">
+        <h4>ADDRESS:</h4>
+        <p>Makassar,</p>
+        <p>Sulawesi Selatan, Indonesia</p>
+      </div>
+      <div class="footer-column">
+        <h4>CONTACT US:</h4>
+        <p>Telpon: 123-456-7890</p>
+        <p>Email: digeka@gmail.com</p>
+        <p>Instagram: digeka.id</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Powered by Digeka</p>
+    </div>
+  </footer>
+
+</body>
+</html>
